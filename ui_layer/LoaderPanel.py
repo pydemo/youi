@@ -26,28 +26,28 @@ from ui_layer.module.MainPanel import MainPanel
 from ui_layer.module.controller.LoaderPanel_Controller import LoaderPanel_Controller as Controller
 
 class LoaderPanel(wx.Panel, Controller):
-    def __init__(self, parent=None):
-        super(LoaderPanel, self).__init__(parent)
+	def __init__(self, parent=None):
+		super(LoaderPanel, self).__init__(parent)
 
-        if 1:
-            vbox = wx.BoxSizer(wx.VERTICAL)
-            
-            panel = MainPanel(parent=self)
-            
-        if 1:
-            self.flog = wx.TextCtrl(self, wx.ID_ANY, "", wx.DefaultPosition, (-1,130),
-                                      wx.TE_MULTILINE | wx.TE_READONLY | wx.TE_LEFT | wx.TE_BESTWRAP | wx.BORDER_NONE)
-        if 1:
-            self.nlog = wx.TextCtrl(self, wx.ID_ANY, "", wx.DefaultPosition, (-1,130),
-                                      wx.TE_MULTILINE | wx.TE_READONLY | wx.TE_LEFT | wx.TE_BESTWRAP | wx.BORDER_NONE)
-        vbox.Add(panel, 1, wx.EXPAND|wx.ALL)
-        hbox = wx.BoxSizer(wx.HORIZONTAL)
-        hbox.Add(self.flog, 1, wx.EXPAND)
-        hbox.Add(self.nlog, 1, wx.EXPAND)
-        vbox.Add(hbox, 0, wx.EXPAND)
-        self.SetSizer(vbox)
-        self.Layout()
-        self.sub('navlog')
-        self.sub('filterlog')
-
-
+		if 1:
+			vbox = wx.BoxSizer(wx.VERTICAL)
+			
+			panel = MainPanel(parent=self)
+		vbox.Add(panel, 1, wx.EXPAND|wx.ALL)
+		if 0:
+			
+			if 1:
+				self.flog = wx.TextCtrl(self, wx.ID_ANY, "", wx.DefaultPosition, (-1,130),
+										  wx.TE_MULTILINE | wx.TE_READONLY | wx.TE_LEFT | wx.TE_BESTWRAP | wx.BORDER_NONE)
+			if 1:
+				self.nlog = wx.TextCtrl(self, wx.ID_ANY, "", wx.DefaultPosition, (-1,130),
+										  wx.TE_MULTILINE | wx.TE_READONLY | wx.TE_LEFT | wx.TE_BESTWRAP | wx.BORDER_NONE)
+			
+			hbox = wx.BoxSizer(wx.HORIZONTAL)
+			hbox.Add(self.flog, 1, wx.EXPAND)
+			hbox.Add(self.nlog, 1, wx.EXPAND)
+			vbox.Add(hbox, 0, wx.EXPAND)
+		self.SetSizer(vbox)
+		self.Layout()
+		self.sub('navlog')
+		self.sub('filterlog')
